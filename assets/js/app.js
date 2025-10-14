@@ -21,6 +21,7 @@ let currentThemeSetting = calculateSettingAsThemeString({
     systemSettingDark
 });
 
+document.querySelector("html").setAttribute("data-theme", currentThemeSetting);
 
 // target the button using the data attribute we added earlier
 const button = document.querySelector("[data-theme-toggle]");

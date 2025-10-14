@@ -1,7 +1,19 @@
-:root {
+[data-theme="dark"] {
     --main-bg-color: midnightblue;
     --main-fg-color: wheat;
     --main-hl-color: lightblue;
+    --reverse-fg-color: midnightblue;
+    --reverse-bg-color: #ccc;
+    --reverse-hl-color: #884400;
+}
+
+[data-theme="light"] {
+    --main-fg-color: midnightblue;
+    --main-bg-color: #ccc;
+    --main-hl-color: #884400;
+    --reverse-bg-color: midnightblue;
+    --reverse-fg-color: wheat;
+    --reverse-hl-color: lightblue;
 }
 
 body {
@@ -12,9 +24,9 @@ body {
 }
 
 div.gdvoisins-outil {
-    --main-fg-color: midnightblue;
-    --main-bg-color: #ccc;
-    --main-hl-color: #884400;
+    --main-fg-color: var(--reverse-fg-color);
+    --main-bg-color: var(--reverse-bg-color);
+    --main-hl-color: var(--reverse-hl-color);
 }
 
 

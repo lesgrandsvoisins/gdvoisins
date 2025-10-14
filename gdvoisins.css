@@ -1,13 +1,54 @@
+:root {
+    --main-bg-color: midnightblue;
+    --main-fg-color: wheat;
+    --main-hl-color: lightblue;
+}
+
 body {
     font-family: "intervariable";
     /* font-family: "fengardo"; */
     margin: 0 10rem;
+    background-color: var(--main-bg-color);
+}
+
+div.gdvoisins-outil {
+    --main-fg-color: midnightblue;
+    --main-bg-color: #ccc;
+    --main-hl-color: #884400;
+}
+
+
+p,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--main-fg-color);
+}
+
+a {
+    color: var(--main-hl-color);
+}
+
+p.subtitle {
+    text-align: center;
+    font-style: italic;
+    font-size: large;
 }
 
 h1,
 h2 {
     text-align: center;
     font-family: "grotesk";
+}
+
+ul.outil li:not(:last-child) {
+    margin-bottom: 0.5rem;
 }
 
 a,
@@ -40,6 +81,8 @@ div.gdvoisins-outil {
     border-radius: 1rem;
     padding: 0 1rem;
     border-width: 1px;
+    margin: 0 auto;
+    background-color: var(--main-bg-color);
 }
 
 @media screen and (max-width: 120rem) {
@@ -53,5 +96,9 @@ div.gdvoisins-outil {
 @media screen and (max-width: 40rem) {
     body {
         margin: 0 1rem;
+    }
+
+    div.gdvoisins-outils {
+        grid-template-columns: 1fr;
     }
 }

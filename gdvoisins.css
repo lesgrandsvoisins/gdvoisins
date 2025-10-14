@@ -84,7 +84,7 @@ div.gdvoisins-outils {
 }
 
 div.gdvoisins-outil {
-    width: 30rem;
+    width: 29rem;
     border-style: solid;
     border-radius: 1rem;
     padding: 0 1rem;
@@ -96,16 +96,24 @@ div.gdvoisins-outil {
 /* div.gdvoisins-outil li a {
     font-size: larger;
 } */
+button.gdvoisins-theme {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+}
 
-@media screen and (max-width: 106rem) {
+
+@media (max-width: 106rem) {
     body {
-        margin: 0 3rem;
+        margin: 0 2rem;
     }
 
     div.gdvoisins-outils {
         grid-template-columns: 1fr 1fr;
     }
 }
+
+
 
 @media screen and (max-width: 66rem) {
     body {

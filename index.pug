@@ -21,7 +21,11 @@ html(class="no-js" lang="fr" )
     link(rel="apple-touch-icon" sizes="180x180"  href="./assets/images/favicon_io/apple-touch-icon.png")
     link(rel="manifest" href="site.webmanifest")
     meta(name="theme-color" content="#fafafa")
+    base(target="_blank")
   body(class="gdvoisins")
+    div.gdvoisins-banner
+      a(href="https://www.lesgrandsvoisins.com" target="_self")
+        img(src="./assets/images/logo-gdvoisins-600-72.png" width="600" height="72" alt="gdvoisins.com" class="gdvoisins-banner" id="gdvoisins-banner")
     h1 GDVoisins.com 
     p.subtitle Bienvenue à GDVoisins, l'environnement informatique de 
       a(href="https://www.lesgrandsvoisins.com") 
@@ -79,7 +83,7 @@ html(class="no-js" lang="fr" )
             | des utilisateurs
             br
             a(href="https://key.lesgrandsvoisins.com/realms/master/account") key.lesgrandsvoisins.com/realms/master/account
-      div.gdvoisins-outil
+      div.gdvoisins-outil 
         h2 Information
         ul.outil 
           li 
@@ -87,24 +91,32 @@ html(class="no-js" lang="fr" )
             | pour gérer nos liens web (favoris / marque pages)
             br
             a(href="https://linkding.lesgrandsvoisins.com") linkding.lesgrandsvoisins.com
+            br
+            | renommer en ld.gdvoisins.com
           li 
             b Hedgedoc
             | 
             | pour éditer nos documents collaboratifs en format Markdown
             br
             a(href="https://mark.lesgrandsvoisins.com") mark.lesgrandsvoisins.com
+            br
+            | renommer en hd.gdvoisins.com
           li 
             b Vikunja 
             | 
             | pour coordonner des projets et des tâches
             br
             a(href="https://task.lesgrandsvoisins.com") task.lesgrandsvoisins.com
+            br
+            | renommer en vk.gdvoisins.com
           li 
             b Vaultwarden
             | 
             | pour gérer nos mots de passe
             br
             a(href="https://vw.lgv.info") vw.lgv.info
+            br
+            | renommer en vw.gdvoisins.com
       div.gdvoisins-outil
         h2 Dons
         ul.outil 
@@ -164,3 +176,4 @@ html(class="no-js" lang="fr" )
             a(href="https://blog.lesgrandsvoisins.com/ghost") blog.lesgrandsvoisins.com/ghost
     button(type="button" data-theme-toggle aria-label="jour / nuit" class="gdvoisins-theme") jout / nuit
     script(src="./assets/js/app.js")
+    script(src="./assets/js/lightdark.js")

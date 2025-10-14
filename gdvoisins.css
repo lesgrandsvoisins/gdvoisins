@@ -30,6 +30,9 @@ div.gdvoisins-outil {
     --main-hl-color: var(--reverse-hl-color);
 }
 
+#gdvoisins-banner:hover {
+    content: url('./assets/images/logo-lesgrandsvoisins-600-72.png');
+}
 
 p,
 ul,
@@ -92,6 +95,11 @@ div.gdvoisins-outil {
     border-width: 1px;
     margin: 0 auto;
     background-color: var(--main-bg-color);
+}
+
+div.gdvoisins-banner {
+    width: 100%;
+    text-align: center;
 }
 
 /* div.gdvoisins-outil li a {

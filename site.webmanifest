@@ -2,11 +2,11 @@
     "short_name": "G D Voisins",
     "name": "G D Voisins : l'informatique des Grands Voisins",
     "icons": [{
-        "src": "./assets/images/favicon_io/android-chrome-192x192.png",
+        "src": "./assets/images/logo/l14s/favicon_io/android-chrome-192x192.png",
         "sizes": "192x192",
         "type": "image/png"
     }, {
-        "src": "./assets/images/favicon_io/android-chrome-512x512.png",
+        "src": "./assets/images/logo/l14s/favicon_io/android-chrome-512x512.png",
         "sizes": "512x512",
         "type": "image/png"
     }],

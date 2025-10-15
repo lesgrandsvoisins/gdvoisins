@@ -24,13 +24,13 @@ body {
     background-color: var(--main-bg-color);
 }
 
-div.gdvoisins-outil {
+div.l14s-outil {
     --main-fg-color: var(--reverse-fg-color);
     --main-bg-color: var(--reverse-bg-color);
     --main-hl-color: var(--reverse-hl-color);
 }
 
-#gdvoisins-banner:hover {
+#l14s-banner:hover {
     content: url('./assets/images/logo/lesgrandsvoisins/logo-lesgrandsvoisins-600-72.png');
 }
 
@@ -81,13 +81,13 @@ a,
     hyphens: auto;
 }
 
-div.gdvoisins-outils {
+div.l14s-outils {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
 }
 
-div.gdvoisins-outil {
+div.l14s-outil {
     width: 29rem;
     border-style: solid;
     border-radius: 1rem;
@@ -97,15 +97,15 @@ div.gdvoisins-outil {
     background-color: var(--main-bg-color);
 }
 
-div.gdvoisins-banner {
+div.l14s-banner {
     width: 100%;
     text-align: center;
 }
 
-/* div.gdvoisins-outil li a {
+/* div.l14s-outil li a {
     font-size: larger;
 } */
-button.gdvoisins-theme {
+button.l14s-theme {
     position: absolute;
     top: 0.25rem;
     right: 0.25rem;
@@ -117,7 +117,7 @@ button.gdvoisins-theme {
         margin: 0 2rem;
     }
 
-    div.gdvoisins-outils {
+    div.l14s-outils {
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -129,13 +129,13 @@ button.gdvoisins-theme {
         margin: 0 1rem;
     }
 
-    div.gdvoisins-outils {
+    div.l14s-outils {
         grid-template-columns: 1fr;
     }
 }
 
 @media screen and (max-width: 33rem) {
-    div.gdvoisins-outil {
+    div.l14s-outil {
         width: unset;
     }
 }

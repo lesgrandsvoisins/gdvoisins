@@ -7,7 +7,7 @@ html(class="no-js" lang="fr" )
     link(rel="stylesheet",href="./assets/fonts/inter/web/inter.css")
     link(rel="stylesheet",href="./assets/fonts/grotesk/fonts/_web/font.css")
     link(rel="stylesheet",href="./assets/css/style.css")
-    link(rel="stylesheet",href="./gdvoisins.css")
+    link(rel="stylesheet",href="./styles.css")
     meta(name="description" content="GDVoisins.com est l'environnement informatique de www.lesgrandsvoisins.com")
     meta(property="og:title" content="GDVoisins.com - Informatique des Grands Voisins")
     meta(property="og:type" content="")
@@ -15,25 +15,25 @@ html(class="no-js" lang="fr" )
     meta(property="og:image" content="")
     meta(property="og:image:alt" content="")
     link(rel="icon" href="./assets/images/logo/gdvoisins/favicon_io/favicon.ico" sizes="any")
-    link(rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png")
-    link(rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="./assets/images/logo/gdvoisins/favicon_io/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="./assets/images/logo/gdvoisins/favicon_io/favicon-16x16.png")
     link(rel="icon" href="./assets/images/logo/gdvoisins/gdvoisins.svg" type="image/svg+xml")
     link(rel="apple-touch-icon" sizes="180x180"  href="./assets/images/logo/gdvoisins/favicon_io/apple-touch-icon.png")
     link(rel="manifest" href="site.webmanifest")
     meta(name="theme-color" content="#fafafa")
     base(target="_blank")
-  body(class="gdvoisins")
-    div.gdvoisins-banner
+  body(class="l14s")
+    div.l14s-banner
       a(href="https://www.lesgrandsvoisins.com" target="_self")
-        //- img(src="./assets/images/logo/gdvoisins/logo-gdvoisins-600-72.png" width="600" height="72" alt="gdvoisins.com" class="gdvoisins-banner" id="gdvoisins-banner")
-        img(src="./assets/images/logo/gdvoisins/logo-gdvoisins-600-72.png" width="600" height="72" alt="gdvoisins.com" class="gdvoisins-banner" id="gdvoisins-banner")
+        //- img(src="./assets/images/logo/gdvoisins/logo-gdvoisins-600-72.png" width="600" height="72" alt="gdvoisins.com" class="l14s-banner" id="l14s-banner")
+        img(src="./assets/images/logo/gdvoisins/logo-gdvoisins-600-72.png" width="600" height="72" alt="gdvoisins.com" class="l14s-banner" id="l14s-banner")
     h1 GDVoisins.com 
     p.subtitle Bienvenue à GDVoisins, l'environnement informatique de 
       a(href="https://www.lesgrandsvoisins.com") 
         b www.lesgrandsvoisins.com
       | .
-    div.gdvoisins-outils
-      div.gdvoisins-outil
+    div.l14s-outils
+      div.l14s-outil
         h2 Sites principaux
         ul.outil 
           li 
@@ -58,7 +58,13 @@ html(class="no-js" lang="fr" )
             a(href="https://blog.lesgrandsvoisins.com") blog.lesgrandsvoisins.com
             br
             | blog.gdvoisins.com renvoi vers blog.lesgrandsvoisins.com 
-      div.gdvoisins-outil
+          li 
+            b GdVoisins 
+            | 
+            | .com pour les outils libres 
+            br
+            a(href="https://www.gdvoisins.com") www.gdvoisins.com
+      div.l14s-outil
         h2 Communication
         ul.outil
           li
@@ -84,7 +90,7 @@ html(class="no-js" lang="fr" )
             | des utilisateurs
             br
             a(href="https://key.lesgrandsvoisins.com/realms/master/account") key.lesgrandsvoisins.com/realms/master/account
-      div.gdvoisins-outil 
+      div.l14s-outil 
         h2 Information
         ul.outil 
           li 
@@ -118,7 +124,7 @@ html(class="no-js" lang="fr" )
             a(href="https://vw.lgv.info") vw.lgv.info
             br
             | renommer en vw.gdvoisins.com
-      div.gdvoisins-outil
+      div.l14s-outil
         h2 Dons
         ul.outil 
           li 
@@ -154,7 +160,7 @@ html(class="no-js" lang="fr" )
             | pour Les Grands Voisins
             br
             a(href="https://donate.stripe.com/fZe7uD07z9hAg0w288") donate.stripe.com/fZe7uD07z9hAg0w288
-      div.gdvoisins-outil
+      div.l14s-outil
         h2 Administration
         ul.outil
           li
@@ -175,6 +181,6 @@ html(class="no-js" lang="fr" )
             b du blog Ghost
             br
             a(href="https://blog.lesgrandsvoisins.com/ghost") blog.lesgrandsvoisins.com/ghost
-    button(type="button" data-theme-toggle aria-label="jour / nuit" class="gdvoisins-theme") jout / nuit
+    button(type="button" data-theme-toggle aria-label="jour / nuit" class="l14s-theme") jout / nuit
     script(src="./assets/js/app.js")
     script(src="./assets/js/lightdark.js")

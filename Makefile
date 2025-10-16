@@ -37,7 +37,8 @@ all:
 gitup:
 	cd ../$(SITE)
 	git pull
-	make print SITE=$(SITE)
+	-ln -s index.$(SITE).html index.html
+	-ln -s site.$(SITE).webmanifest site.webmanifest
 
 gitupall:
 	make gitpull SITE=gdvoisins

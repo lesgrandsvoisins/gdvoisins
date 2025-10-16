@@ -28,6 +28,8 @@ all:
 	make print SITE=gdvoisins
 	make print SITE=gdv1
 	make print SITE=l14s
+	git commit -am "Génération HTML"
+	git push
 
 gitpull:
 	cd ../$(SITE); \

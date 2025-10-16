@@ -34,13 +34,13 @@ all:
 	make print SITE=gdv1
 	make print SITE=l14s
 
-gitup:
+gitpull:
 	cd ../$(SITE)
 	git pull
 	-ln -s index.$(SITE).html index.html
 	-ln -s site.$(SITE).webmanifest site.webmanifest
 
-gitupall:
+gitall:
 	make gitpull SITE=gdvoisins
 	make gitpull SITE=gdv1
 	make gitpull SITE=l14s

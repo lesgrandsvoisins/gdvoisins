@@ -18,10 +18,7 @@ serve:
 print:
 	echo "Usage : make print SITE=$(SITE)"
 	pug -O .pug.options.json index.$(SITE).pug
-# 	cp index.$(SITE).html index.html
 	echo "Generated index.$(SITE).html from index.$(SITE).pug"
-# 	cp site.$(SITE).webmanifest site.webmanifest
-# 	echo "Copied site.webmanifest from site.$(SITE).webmanifest"
 
 check:
 	python -m http.server $(PORT) & echo "$$!" > .tmp.pythonid

@@ -8,8 +8,8 @@ html(class="no-js" lang="fr" )
     link(rel="stylesheet",href="./assets/fonts/grotesk/fonts/_web/font.css")
     link(rel="stylesheet",href="./assets/css/style.css")
     link(rel="stylesheet",href="./styles.css")
-    meta(name="description" content="GDVoisins.com est l'environnement informatique de www.lesgrandsvoisins.com")
-    meta(property="og:title" content="GDVoisins.com - Informatique des Grands Voisins")
+    meta(name="description" content="GdVoisins.com est l'environnement informatique de www.lesgrandsvoisins.com")
+    meta(property="og:title" content="GdVoisins.com - Informatique des Grands Voisins")
     meta(property="og:type" content="")
     meta(property="og:url" content="https://www.gdvoisins.com")
     meta(property="og:image" content="")
@@ -20,6 +20,7 @@ html(class="no-js" lang="fr" )
     link(rel="icon" href="./assets/images/logo/gdvoisins/gdvoisins.svg" type="image/svg+xml")
     link(rel="apple-touch-icon" sizes="180x180"  href="./assets/images/logo/gdvoisins/favicon_io/apple-touch-icon.png")
     link(rel="manifest" href="site.webmanifest")
+    link(rel="preload" as="image" href="./assets/images/logo/lesgrandsvoisins/logo-lesgrandsvoisins-600-72.png")
     meta(name="theme-color" content="#fafafa")
     base(target="_blank")
   body(class="l14s")
@@ -27,8 +28,8 @@ html(class="no-js" lang="fr" )
       a(href="https://www.lesgrandsvoisins.com" target="_self")
         //- img(src="./assets/images/logo/gdvoisins/logo-gdvoisins-600-72.png" width="600" height="72" alt="gdvoisins.com" class="l14s-banner" id="l14s-banner")
         img(src="./assets/images/logo/gdvoisins/logo-gdvoisins-600-72.png" width="600" height="72" alt="gdvoisins.com" class="l14s-banner" id="l14s-banner")
-    h1 GDVoisins.com 
-    p.subtitle Bienvenue à GDVoisins, l'environnement informatique de 
+    h1 GdVoisins.com 
+    p.subtitle Bienvenue à GdVoisins, l'environnement informatique de 
       a(href="https://www.lesgrandsvoisins.com") 
         b www.lesgrandsvoisins.com
       | .
@@ -63,8 +64,14 @@ html(class="no-js" lang="fr" )
             | .com pour les outils libres 
             br
             a(href="https://www.gdvoisins.com") www.gdvoisins.com
+          li
+            | Documentation par notre
+            | 
+            b wiki Quartz
+            br
+            a(href="https://quartz.resdigita.com") quartz.resdigita.com
       div.l14s-outil
-        h2 Communication
+        h2 Outils libres 1
         ul.outil
           li
             b Webmail et serveur mail 
@@ -84,13 +91,15 @@ html(class="no-js" lang="fr" )
             br
             a(href="https://jitsi.lgv.info/lesgrandsvoisins") jitsi.lgv.info/lesgrandsvoisins
           li 
-            b Comptes Keycloak 
+            b Vaultwarden
             | 
-            | des utilisateurs
+            | pour gérer nos mots de passe
             br
-            a(href="https://key.lesgrandsvoisins.com/realms/master/account") key.lesgrandsvoisins.com/realms/master/account
+            a(href="https://vw.lgv.info") vw.lgv.info
+            br
+            | renommer en vw.gdvoisins.com
       div.l14s-outil 
-        h2 Information
+        h2 Outils libres 2
         ul.outil 
           li 
             b Linkding 
@@ -115,32 +124,24 @@ html(class="no-js" lang="fr" )
             a(href="https://task.lesgrandsvoisins.com") task.lesgrandsvoisins.com
             br
             | renommer en vk.gdvoisins.com
+      div.l14s-outil 
+        h2 Gestion de son compte
+        ul.outil 
           li 
-            b Vaultwarden
+            b Comptes Keycloak 
             | 
-            | pour gérer nos mots de passe
+            | des utilisateurs
             br
-            a(href="https://vw.lgv.info") vw.lgv.info
+            a(href="https://key.lesgrandsvoisins.com/realms/master/account") key.lesgrandsvoisins.com/realms/master/account
+          li 
+            | Gestion d'utilisateur 
+            |
+            b Guichet 
             br
-            | renommer en vw.gdvoisins.com
+            a(href="https://guichet.resdigita.com/user") guichet.resdigita.com/user
       div.l14s-outil
         h2 Dons
         ul.outil 
-          li 
-            b les_grands_voisins 
-            | sur Instagram 
-            br
-            a(href="https://www.instagram.com/les_grands_voisins") www.instagram.com/les_grands_voisins
-            br
-            | peut-être à migrer vers gdvoisins
-          li 
-            b @LesGrandsVoisinsCom
-            | 
-            | sur Youtube 
-            br
-            a(href="https://www.youtube.com/@LesGrandsVoisinsCom") www.youtube.com/@LesGrandsVoisinsCom
-            br
-            | peut-être à migrer vers @gdvoisins
           li
             b Dons HelloAsso 
             | 
@@ -159,6 +160,57 @@ html(class="no-js" lang="fr" )
             | pour Les Grands Voisins
             br
             a(href="https://donate.stripe.com/fZe7uD07z9hAg0w288") donate.stripe.com/fZe7uD07z9hAg0w288
+      div.l14s-outil 
+        h2 Médias sociaux
+        ul.outil 
+          li 
+            b les_grands_voisins 
+            | sur Instagram 
+            br
+            a(href="https://www.instagram.com/les_grands_voisins") www.instagram.com/les_grands_voisins
+            br
+            | peut-être à migrer vers gdvoisins
+          li 
+            b @LesGrandsVoisinsCom
+            | 
+            | sur Youtube 
+            br
+            a(href="https://www.youtube.com/@LesGrandsVoisinsCom") www.youtube.com/@LesGrandsVoisinsCom
+            br
+            | peut-être à migrer vers @gdvoisins
+          li 
+            b lesgrandsvoisins 
+            | 
+            | sur GitHub 
+            br
+            a(href="https://github.com/lesgrandsvoisins") github.com/lesgrandsvoisins
+      div.l14s-outil
+        h2 Expérimentation
+        ul.outil
+          li
+            | Calendriers 
+            | 
+            b Xandikos
+            br
+            a(href="https://xandikos.lesgv.org") xandikos.lesgv.org
+          li
+            | Blog  
+            | 
+            b Write Freely
+            br
+            a(href="https://writefreely.lesgrandsvoisins.com") writefreely.lesgrandsvoisins.com
+          li
+            | Forum  
+            | 
+            b Discourse
+            br
+            a(href="https://discourse.lesgrandsvoisins.com/") discourse.lesgrandsvoisins.com/
+          li
+            | Fils de discussion  
+            | 
+            b Matter Most
+            br
+            a(href="https://mm.lgv.info") mm.lgv.info
       div.l14s-outil
         h2 Administration
         ul.outil
@@ -181,11 +233,23 @@ html(class="no-js" lang="fr" )
             br
             a(href="https://blog.lesgrandsvoisins.com/ghost") blog.lesgrandsvoisins.com/ghost
           li
-            | Documentation
+            | Monitoring par notre
             | 
-            b par le Wiki Quartz
+            b Uptime Kuma
             br
-            a(href="https://quartz.resdigita.com") quartz.resdigita.com
+            a(href="https://up.lesgrandsvoisins.com") up.lesgrandsvoisins.com
+          li 
+            | Listes de diffusion par notre serveur
+            | 
+            b ListMonk 
+            br
+            a(href="https://list.lesgrandsvoisins.com") list.lesgrandsvoisins.com
+          li
+            | Wikijs de configuration  
+            | 
+            b Config Magic
+            br
+            a(href="https://www.configmagic.com") www.configmagic.com
     button(type="button" data-theme-toggle aria-label="jour / nuit" class="l14s-theme") jout / nuit
     script(src="./assets/js/app.js")
     script(src="./assets/js/lightdark.js")

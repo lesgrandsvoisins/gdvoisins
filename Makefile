@@ -4,8 +4,6 @@ PORT?=8088
 serve:
 	echo "Usage : make serve SITE=$(SITE)"
 	-rm .tmp.pythonid .tmp.pugid
-	cp site.$(SITE).webmanifest site.webmanifest
-	echo "Copied site.webmanifest from site.$(SITE).webmanifest"
 	echo "Watching index.$(SITE).pug for publication on http://0.0.0.0:$(PORT)/index.$(SITE).html"
 	pug -O .pug.options.json -w index.$(SITE).pug & echo "$$!" > .tmp.pugid
 	python -m http.server $(PORT) & echo "$$!" > .tmp.pythonid

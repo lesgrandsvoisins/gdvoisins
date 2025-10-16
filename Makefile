@@ -30,11 +30,12 @@ all:
 	make print SITE=l14s
 
 gitpull:
-	cd ../$(SITE)
+	cd ../$(SITE); \
 	git pull 
-	-rm index.html site.webmanifest
-	-ln -s index.$(SITE).html index.html
-	-ln -s site.$(SITE).webmanifest site.webmanifest
+	-cd ../$(SITE); \
+	rm index.html site.webmanifest; \
+	ln -s index.$(SITE).html index.html; \
+	ln -s site.$(SITE).webmanifest site.webmanifest
 
 gitall:
 	make gitpull SITE=gdvoisins

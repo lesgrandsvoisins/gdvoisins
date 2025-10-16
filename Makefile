@@ -36,7 +36,8 @@ all:
 
 gitpull:
 	cd ../$(SITE)
-	git pull
+	git pull 
+	-rm index.html site.webmanifest
 	-ln -s index.$(SITE).html index.html
 	-ln -s site.$(SITE).webmanifest site.webmanifest
 

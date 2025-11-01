@@ -1,0 +1,61 @@
+const menuBtn = document.getElementById('menuBtn');
+const appMenu = document.getElementById('appMenu');
+const overlay = document.getElementById('overlay');
+const appGrid = document.getElementById('appGrid');
+
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    loadApps();
+});
+
+// Load apps from JSON data
+function loadApps() {
+    appsData.groups.forEach(group => {
+        // const groupDiv = document.createElement('div');
+        // groupDiv.className = 'app-group';
+
+        const groupLabel = document.createElement('div');
+        groupLabel.className = 'group-label';
+        groupLabel.textContent = group.label;
+        // groupDiv.appendChild(groupLabel);
+        appGrid.appendChild(groupLabel);
+
+        group.apps.forEach(app => {
+            const appItem = document.createElement('a');
+            appItem.href = app.url;
+            appItem.className = 'app-item';
+
+            appItem.innerHTML = `
+                        <div class="app-card">
+                            <div class="app-front">
+                                <div class="app-icon" style="background: ${app.color};">${app.icon}</div>
+                                <div class="app-name">${app.name}</div>
+                            </div>
+                            <div class="app-back">
+                                <div class="app-name" style="font-weight: 500; margin-bottom: 4px;">${app.name}</div>
+                                <div class="app-description">${app.description}</div>
+                            </div>
+                        </div>
+                    `;
+
+            appItem.addEventListener('click', (e) => {
+                e.preventDefault();
+                toggleMenu();
+                console.log(`Clicked: ${app.name}`);
+            });
+
+            // groupDiv.appendChild(appItem);
+            appGrid.appendChild(appItem);
+        });
+
+        // appGrid.appendChild(groupDiv);
+    });
+}
+
+function toggleMenu() {
+    appMenu.classList.toggle('active');
+    overlay.classList.toggle('active');
+}
+
+menuBtn.addEventListener('click', toggleMenu);
+overlay.addEventListener('click', toggleMenu);

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google-Inspired App Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f8f9fa;
+        }
+
+        .header {
+            background: white;
+            padding: 12px 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .menu-button {
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: transparent;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+
+        .menu-button:hover {
+            background: #f1f3f4;
+        }
+
+        .menu-icon {
+            width: 20px;
+            height: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 5px);
+            grid-template-rows: repeat(3, 5px);
+            gap: 2px;
+        }
+
+        .menu-icon span {
+            width: 5px;
+            height: 5px;
+            background: #5f6368;
+            border-radius: 1px;
+        }
+
+        .avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .avatar:hover {
+            transform: scale(1.05);
+        }
+
+        .logo {
+            font-size: 20px;
+            color: #5f6368;
+            font-weight: 400;
+        }
+
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.4);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+            z-index: 998;
+        }
+
+        .menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .app-menu {
+            position: fixed;
+            top: 60px;
+            right: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            padding: 16px;
+            width: 380px;
+            max-height: 520px;
+            overflow-y: auto;
+            transform: scale(0.9);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease-out;
+            transform-origin: top right;
+            z-index: 999;
+        }
+
+        .app-menu.active {
+            transform: scale(1);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .app-group {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .group-label {
+            font-size: 11px;
+            color: #5f6368;
+            font-weight: 500;
+            padding: 4px 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .app-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 12px 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            perspective: 1000px;
+            height: 100px;
+        }
+
+        .app-card {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .app-item:hover .app-card {
+            transform: rotateY(180deg);
+        }
+
+        .app-front,
+        .app-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+
+        .app-front {
+            background: transparent;
+        }
+
+        .app-back {
+            background: #f1f3f4;
+            transform: rotateY(180deg);
+            padding: 8px;
+        }
+
+        .app-description {
+            font-size: 10px;
+            color: #5f6368;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        .app-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 6px;
+        }
+
+        .app-name {
+            font-size: 12px;
+            color: #202124;
+            text-align: center;
+        }
+
+        .tooltip {
+            position: fixed;
+            background: white;
+            color: #202124;
+            padding: 10px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s ease-in;
+            z-index: 1000;
+            white-space: nowrap;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+            border: 2px solid #202124;
+        }
+
+        .tooltip::before {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 20px;
+            width: 12px;
+            height: 12px;
+            background: white;
+            border-radius: 50%;
+            border: 2px solid #202124;
+            border-top: none;
+            border-left: none;
+        }
+
+        .tooltip::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 10px;
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+            border: 2px solid #202124;
+            border-top: none;
+            border-left: none;
+        }
+
+        .tooltip.show {
+            opacity: 1;
+        }
+
+        .content {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content h1 {
+            color: #202124;
+            margin-bottom: 16px;
+        }
+
+        .content p {
+            color: #5f6368;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">My App</div>
+        <div class="header-right">
+            <button class="menu-button" id="menuBtn">
+                <div class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="avatar">A</div>
+        </div>
+    </div>
+
+    <div class="menu-overlay" id="overlay"></div>
+
+    <div class="app-menu" id="appMenu">
+        <div class="app-grid" id="appGrid">
+            <!-- Apps will be loaded dynamically -->
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Welcome to Your Dashboard</h1>
+        <p>Click the menu button in the top left to access your apps. This Google-inspired menu provides quick access to all your favorite applications.</p>
+    </div>
+
+    <script>
+        // Static JSON data with 24 apps in 9 groups
+        const appsData = {
+            "groups": [
+                {
+                    "label": "Communication",
+                    "apps": [
+                        { "name": "Mail", "icon": "📧", "color": "#ea4335", "url": "#mail", "description": "Send and receive emails with smart filters" },
+                        { "name": "Chat", "icon": "💬", "color": "#34a853", "url": "#chat", "description": "Instant messaging for teams and groups" },
+                        { "name": "Meet", "icon": "🎥", "color": "#0f9d58", "url": "#meet", "description": "Video conferencing and online meetings" }
+                    ]
+                },
+                {
+                    "label": "Productivity",
+                    "apps": [
+                        { "name": "Calendar", "icon": "📅", "color": "#4285f4", "url": "#calendar", "description": "Schedule events and manage your time" },
+                        { "name": "Tasks", "icon": "✓", "color": "#1967d2", "url": "#tasks", "description": "Create and organize your to-do lists" },
+                        { "name": "Keep", "icon": "📝", "color": "#fbbc04", "url": "#keep", "description": "Quick notes and reminders" }
+                    ]
+                },
+                {
+                    "label": "Documents",
+                    "apps": [
+                        { "name": "Docs", "icon": "📄", "color": "#4285f4", "url": "#docs", "description": "Create and edit text documents online" },
+                        { "name": "Sheets", "icon": "📊", "color": "#34a853", "url": "#sheets", "description": "Spreadsheets with powerful formulas" },
+                        { "name": "Slides", "icon": "📊", "color": "#fbbc04", "url": "#slides", "description": "Build beautiful presentations" }
+                    ]
+                },
+                {
+                    "label": "Storage",
+                    "apps": [
+                        { "name": "Drive", "icon": "💾", "color": "#ff6d01", "url": "#drive", "description": "Store and share files in the cloud" },
+                        { "name": "Photos", "icon": "📸", "color": "#1a73e8", "url": "#photos", "description": "Organize and edit your photos" },
+                        { "name": "Cloud", "icon": "☁️", "color": "#5e35b1", "url": "#cloud", "description": "Backup and sync your data" }
+                    ]
+                },
+                {
+                    "label": "Media",
+                    "apps": [
+                        { "name": "YouTube", "icon": "🎬", "color": "#ff0000", "url": "#youtube", "description": "Watch and share videos worldwide" },
+                        { "name": "Music", "icon": "🎵", "color": "#ff5722", "url": "#music", "description": "Stream millions of songs" },
+                        { "name": "Podcasts", "icon": "🎙️", "color": "#673ab7", "url": "#podcasts", "description": "Listen to your favorite shows" }
+                    ]
+                },
+                {
+                    "label": "Navigation",
+                    "apps": [
+                        { "name": "Maps", "icon": "🗺️", "color": "#34a853", "url": "#maps", "description": "Navigate and explore the world" },
+                        { "name": "Earth", "icon": "🌍", "color": "#4285f4", "url": "#earth", "description": "Explore the planet in 3D" },
+                        { "name": "Travel", "icon": "✈️", "color": "#1a73e8", "url": "#travel", "description": "Plan trips and find flights" }
+                    ]
+                },
+                {
+                    "label": "Shopping",
+                    "apps": [
+                        { "name": "Shopping", "icon": "🛒", "color": "#ea4335", "url": "#shopping", "description": "Find products and compare prices" },
+                        { "name": "Wallet", "icon": "💳", "color": "#5f6368", "url": "#wallet", "description": "Manage cards and payments" },
+                        { "name": "Pay", "icon": "💰", "color": "#34a853", "url": "#pay", "description": "Send and receive money easily" }
+                    ]
+                },
+                {
+                    "label": "News",
+                    "apps": [
+                        { "name": "News", "icon": "📰", "color": "#1a73e8", "url": "#news", "description": "Stay informed with latest headlines" },
+                        { "name": "Discover", "icon": "🔍", "color": "#fbbc04", "url": "#discover", "description": "Personalized content feed" },
+                        { "name": "Weather", "icon": "⛅", "color": "#4285f4", "url": "#weather", "description": "Check forecasts and conditions" }
+                    ]
+                },
+                {
+                    "label": "More",
+                    "apps": [
+                        { "name": "Settings", "icon": "⚙️", "color": "#5f6368", "url": "#settings", "description": "Configure your preferences" },
+                        { "name": "Help", "icon": "❓", "color": "#1a73e8", "url": "#help", "description": "Get support and answers" },
+                        { "name": "Feedback", "icon": "📝", "color": "#34a853", "url": "#feedback", "description": "Share your thoughts with us" }
+                    ]
+                }
+            ]
+        };
+
+        const menuBtn = document.getElementById('menuBtn');
+        const appMenu = document.getElementById('appMenu');
+        const overlay = document.getElementById('overlay');
+        const appGrid = document.getElementById('appGrid');
+
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            loadApps();
+        });
+
+        // Load apps from JSON data
+        function loadApps() {
+            appsData.groups.forEach(group => {
+                const groupDiv = document.createElement('div');
+                groupDiv.className = 'app-group';
+                
+                const groupLabel = document.createElement('div');
+                groupLabel.className = 'group-label';
+                groupLabel.textContent = group.label;
+                groupDiv.appendChild(groupLabel);
+                
+                group.apps.forEach(app => {
+                    const appItem = document.createElement('a');
+                    appItem.href = app.url;
+                    appItem.className = 'app-item';
+                    
+                    appItem.innerHTML = `
+                        <div class="app-card">
+                            <div class="app-front">
+                                <div class="app-icon" style="background: ${app.color};">${app.icon}</div>
+                                <div class="app-name">${app.name}</div>
+                            </div>
+                            <div class="app-back">
+                                <div class="app-name" style="font-weight: 500; margin-bottom: 4px;">${app.name}</div>
+                                <div class="app-description">${app.description}</div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    appItem.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        toggleMenu();
+                        console.log(`Clicked: ${app.name}`);
+                    });
+                    
+                    groupDiv.appendChild(appItem);
+                });
+                
+                appGrid.appendChild(groupDiv);
+            });
+        }
+
+        function toggleMenu() {
+            appMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+    </script>
+</body>
+</html>

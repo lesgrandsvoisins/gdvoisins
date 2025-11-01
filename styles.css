@@ -106,7 +106,7 @@ div.l14s-banner {
     font-size: larger;
 } */
 button.l14s-theme {
-    position: absolute;
+    /* position: absolute; */
     top: 0.25rem;
     right: 0.25rem;
 }

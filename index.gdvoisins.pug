@@ -8,6 +8,7 @@ html(class="no-js" lang="fr" )
     link(rel="stylesheet",href="./assets/fonts/grotesk/fonts/_web/font.css")
     link(rel="stylesheet",href="./assets/css/style.css")
     link(rel="stylesheet",href="./styles.css")
+    link(rel="stylesheet",href="./assets/css/appmenu.css")
     meta(name="description" content="GdVoisins.com est l'environnement informatique de www.lesgrandsvoisins.com")
     meta(property="og:title" content="GdVoisins.com - Informatique des Grands Voisins")
     meta(property="og:type" content="")
@@ -19,6 +20,7 @@ html(class="no-js" lang="fr" )
     link(rel="icon" type="image/png" sizes="16x16" href="./assets/images/logo/gdvoisins/favicon_io/favicon-16x16.png")
     link(rel="icon" href="./assets/images/logo/gdvoisins/logo-gd-voisins-800-800.svg" type="image/svg+xml")
     link(rel="apple-touch-icon" sizes="180x180"  href="./assets/images/logo/gdvoisins/favicon_io/apple-touch-icon.png")
+    script(src="./assets/js/appdata.js")
     link(rel="manifest" href="site.webmanifest")
     link(rel="preload" as="image" href="./assets/images/logo/lesgrandsvoisins/logo-lesgrandsvoisins-600-72.png" width="600" height="72")
     meta(http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0")
@@ -29,16 +31,36 @@ html(class="no-js" lang="fr" )
     meta(name="theme-color" content="#fafafa")
     base(target="_blank")
   body(class="l14s")
-    div.l14s-banner
-      a(href="https://www.lesgrandsvoisins.com" target="_self")
-        //- img(src="./assets/images/logo/gdvoisins/logo-gdvoisins-600-72.png" width="600" height="72" alt="gdvoisins.com" class="l14s-banner" id="l14s-banner")
-        img(src="./assets/images/logo/gdvoisins/logo-gdvoisins-600-72.png" width="600" height="72" alt="gdvoisins.com" class="l14s-banner" id="l14s-banner")
-    h1 GdVoisins.com 
-    p.subtitle Bienvenue à GdVoisins, l'environnement informatique de 
-      a(href="https://www.lesgrandsvoisins.com") 
-        b www.lesgrandsvoisins.com
-      | .
-    include content.pug
-    button(type="button" data-theme-toggle aria-label="jour / nuit" class="l14s-theme") jout / nuit
-    script(src="./assets/js/app.js")
-    script(src="./assets/js/lightdark.js")
+    .header-right
+      button(type="button" data-theme-toggle aria-label="jour / nuit" class="l14s-theme") jout / nuit
+      button#menuBtn.menu-button
+        .menu-icon
+          span
+          span
+          span
+          span
+          span
+          span
+          span
+          span
+          span
+      .avatar A
+  #overlay.menu-overlay
+  #appMenu.app-menu
+    #appGrid.app-grid
+  div.l14s-banner
+    a(href="https://www.lesgrandsvoisins.com" target="_self")
+      //- img(src="./assets/images/logo/gdvoisins/logo-gdvoisins-600-72.png" width="600" height="72" alt="gdvoisins.com" class="l14s-banner" id="l14s-banner")
+      img(src="./assets/images/logo/gdvoisins/logo-gdvoisins-600-72.png" width="600" height="72" alt="gdvoisins.com" class="l14s-banner" id="l14s-banner")
+  h1 GdVoisins.com 
+  p.subtitle Bienvenue à GdVoisins, l'environnement informatique de 
+    a(href="https://www.lesgrandsvoisins.com") 
+      b www.lesgrandsvoisins.com
+    | .
+
+
+  include content.pug
+  
+  script(src="./assets/js/app.js")
+  script(src="./assets/js/loadapps.js")
+  script(src="./assets/js/lightdark.js")

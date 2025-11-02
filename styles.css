@@ -101,6 +101,12 @@ div.l14s-banner {
     max-width: 100%;
     height: auto;
     text-align: center;
+    overflow: visible;
+}
+
+div.l14s-banner>a>img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* div.l14s-outil li a {

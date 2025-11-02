@@ -62,7 +62,7 @@ const appsData = {
                     "name": "Mots de Passe",
                     "icon": "🔑",
                     "color": "#0f2879ff",
-                    "url": "#chat",
+                    "url": "https://vw.lgv.info/",
                     "description": "Vaultwarden pour gérer nos mots de passe"
                 }
             ]

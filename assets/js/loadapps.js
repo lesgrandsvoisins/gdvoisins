@@ -55,6 +55,7 @@ function loadApps() {
                             <div class="app-front">
                                 <div class="app-icon" style="background: ${app.color};">${app.icon}</div>
                                 <div class="app-name">${app.name}</div>
+                                ${docHTML}
                             </div>
                             <div class="app-back">
                                     <div class="app-name">${app.name}</div>

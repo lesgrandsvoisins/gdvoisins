@@ -30,7 +30,7 @@
 }
 
 .menu-button:hover {
-    background: #f1f3f4;
+    background: var(--reverse-bg-color);
 }
 
 .menu-icon {
@@ -45,8 +45,13 @@
 .menu-icon span {
     width: 5px;
     height: 5px;
-    background: #5f6368;
+    background: var(--main-fg-color);
     border-radius: 1px;
+}
+
+.menu-icon:hover span {
+    background: var(--reverse-fg-color);
+
 }
 
 .avatar {
@@ -54,7 +59,8 @@
     height: 32px;
     border-radius: 50%;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    display: flex;
+    display: none;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
     color: white;

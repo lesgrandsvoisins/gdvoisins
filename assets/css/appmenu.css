@@ -259,7 +259,7 @@
     left: 0;
     position: absolute;
     text-align: center;
-    bottom: 0;
+    bottom: 0rem;
     transform-origin: bottom left;
     width: 100%;
     color: var(--reverse-bg-color);
@@ -311,6 +311,10 @@ div.app-back>a {
 
     .app-menu {
         width: 80vw;
+    }
+
+    .app-item>label {
+        bottom: -2.5rem;
     }
 }
 

@@ -98,7 +98,8 @@ div.l14s-outil {
 }
 
 div.l14s-banner {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
     text-align: center;
 }
 

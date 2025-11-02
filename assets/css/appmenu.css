@@ -329,7 +329,7 @@ div.app-back>a {
     }
 }
 
-@media screen and (max-width: 22rem) {
+@media screen and (max-width: 25rem) {
     .app-grid {
         grid-template-columns: repeat(1, 1fr);
         gap: 1rem;

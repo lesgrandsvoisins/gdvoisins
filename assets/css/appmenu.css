@@ -269,14 +269,14 @@
 .app-item>label {
     height: 1rem;
     transform: rotate(-90deg);
-    left: 0;
+    bottom: 0.75rem;
+    left: 0.25rem;
     position: absolute;
-    text-align: center;
-    bottom: 0rem;
     transform-origin: bottom left;
-    width: 100%;
     color: var(--reverse-bg-color);
-    /* background-color: var(--main-bg-color); */
+    font-size: smaller;
+    max-width: 7rem;
+
 }
 
 
@@ -320,20 +320,23 @@ div.app-back>a {
     .app-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
+        right: 1rem;
     }
 
     .app-menu {
         width: 80vw;
     }
 
-    .app-item>label {
-        bottom: -2.5rem;
-    }
 }
 
 @media screen and (max-width: 25rem) {
     .app-grid {
         grid-template-columns: repeat(1, 1fr);
         gap: 1rem;
+    }
+
+    .app-menu {
+        right: 0;
+        max-width: 90vw;
     }
 }

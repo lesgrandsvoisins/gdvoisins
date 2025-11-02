@@ -30,7 +30,7 @@
 }
 
 .menu-button:hover {
-    background: var(--reverse-bg-color);
+    background: var(--main-bg-color);
 }
 
 .menu-icon {
@@ -40,6 +40,8 @@
     grid-template-columns: repeat(3, 5px);
     grid-template-rows: repeat(3, 5px);
     gap: 2px;
+    padding: 0.15rem;
+    background-color: var(--main-bg-color);
 }
 
 .menu-icon span {

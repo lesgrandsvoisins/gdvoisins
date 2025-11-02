@@ -14,17 +14,34 @@ function loadApps() {
         // const groupDiv = document.createElement('div');
         // groupDiv.className = 'app-group';
 
-        const groupLabel = document.createElement('div');
-        groupLabel.className = 'group-label';
-        groupLabel.textContent = group.label;
-        // groupDiv.appendChild(groupLabel);
-        appGrid.appendChild(groupLabel);
+        // const groupLabel = document.createElement('div');
+        // groupLabel.className = 'group-label';
+        // groupLabel.textContent = group.label;
+        // // groupDiv.appendChild(groupLabel);
+        // appGrid.appendChild(groupLabel);
+
+        n = group.apps.length
+        i = 0;
 
         group.apps.forEach(app => {
             const appItem = document.createElement('a');
+            i++;
+            if (i == 1) {
+                extraClass = "app-item-first";
+            } else if (i == n) {
+                extraClass = "app-item-last";
+            } else {
+                extraClass = "app-item-middle";
+            }
             appItem.href = app.url;
-            appItem.className = 'app-item';
+            appItem.className = "app-item " + extraClass;
 
+            docHTML = "";
+            if (app.docurl && app.docurl != "") {
+                docHTML = `
+                <form action="${app.docurl}" class="app-documentation"><input type="submit" value="doc."/></form>
+                `;
+            }
             appItem.innerHTML = `
                         <div class="app-card">
                             <div class="app-front">
@@ -32,17 +49,20 @@ function loadApps() {
                                 <div class="app-name">${app.name}</div>
                             </div>
                             <div class="app-back">
-                                <div class="app-name" style="font-weight: 500; margin-bottom: 4px;">${app.name}</div>
-                                <div class="app-description">${app.description}</div>
+                                    <div class="app-name">${app.name}</div>
+                                    <div class="app-description">${app.description}</div>
+                                ${docHTML}
+                                    <div class="group-label">${group.label}</div>
                             </div>
+                            
                         </div>
                     `;
 
-            appItem.addEventListener('click', (e) => {
-                e.preventDefault();
-                toggleMenu();
-                console.log(`Clicked: ${app.name}`);
-            });
+            // appItem.addEventListener('click', (e) => {
+            //     e.preventDefault();
+            //     toggleMenu();
+            //     console.log(`Clicked: ${app.name}`);
+            // });
 
             // groupDiv.appendChild(appItem);
             appGrid.appendChild(appItem);

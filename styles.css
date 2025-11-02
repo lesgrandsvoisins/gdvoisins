@@ -1,3 +1,12 @@
+:root {
+    --main-fg-color: midnightblue;
+    --main-bg-color: #ccc;
+    --main-hl-color: #884400;
+    --reverse-bg-color: midnightblue;
+    --reverse-fg-color: wheat;
+    --reverse-hl-color: lightblue;
+}
+
 [data-theme="light"] {
     --main-fg-color: midnightblue;
     --main-bg-color: #ccc;

@@ -26,8 +26,15 @@ function loadApps() {
         group.apps.forEach(app => {
             const appItem = document.createElement('a');
             i++;
+            label = "";
+
             if (i == 1) {
                 extraClass = "app-item-first";
+                label = `
+                <label for="${app.id}">
+                    ${group.label}
+                </label>
+                `;
             } else if (i == n) {
                 extraClass = "app-item-last";
             } else {
@@ -43,7 +50,8 @@ function loadApps() {
                 `;
             }
             appItem.innerHTML = `
-                        <div class="app-card">
+                        ${label}
+                        <div class="app-card" id="${app.id}">
                             <div class="app-front">
                                 <div class="app-icon" style="background: ${app.color};">${app.icon}</div>
                                 <div class="app-name">${app.name}</div>
@@ -54,8 +62,8 @@ function loadApps() {
                                 ${docHTML}
                                     <div class="group-label">${group.label}</div>
                             </div>
-                            
                         </div>
+                
                     `;
 
             // appItem.addEventListener('click', (e) => {

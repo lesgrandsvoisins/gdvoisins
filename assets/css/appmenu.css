@@ -204,10 +204,21 @@
     background-color: transparent;
 }
 
-.app-documentation>input {
-    border-radius: 1em 1em 0 0;
+
+.app-back>.app-documentation>input {
+    border-radius: 1rem 1rem 0 0;
+    border-bottom: none;
     border-width: 1px;
     font-weight: bold;
+}
+
+.app-front>.app-documentation>input {
+    border-radius: 100%;
+    border-width: 1px;
+    font-weight: bold;
+    font-size: large;
+    height: 3rem;
+    width: 3rem;
 }
 
 .app-icon {

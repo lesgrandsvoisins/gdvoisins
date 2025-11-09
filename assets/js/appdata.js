@@ -4,7 +4,7 @@ const appsData = {
             "label": "Sites principaux",
             "apps": [{
                     "id": "www",
-                    "name": "WWW",
+                    "appName": "WWW",
                     "icon": "🏠",
                     "color": "#fbbc04",
                     "url": "https://www.lesgrandsvoisins.com",
@@ -12,7 +12,7 @@ const appsData = {
                 },
                 {
                     "id": "blog",
-                    "name": "Blog",
+                    "appName": "Blog",
                     "icon": "📰",
                     "color": "#34a853",
                     "url": "https://blog.lesgrandsvoisins.com",
@@ -20,7 +20,7 @@ const appsData = {
                 },
                 {
                     "id": "gdvoisins",
-                    "name": "GDVoisins",
+                    "appName": "GDVoisins",
                     "color": "#4285f4",
                     "icon": "🧭",
                     "url": "https://www.gdvoisins.com",
@@ -28,7 +28,7 @@ const appsData = {
                 },
                 {
                     "id": "documentation",
-                    "name": "Documentation",
+                    "appName": "Documentation",
                     "icon": "📖",
                     "color": "#04bcfb",
                     "url": "https://quartz.resdigita.com",
@@ -40,7 +40,7 @@ const appsData = {
             "label": "Outils Libres",
             "apps": [{
                     "id": "webmail",
-                    "name": "Webmail",
+                    "appName": "Webmail",
                     "icon": "✉️",
                     "color": "#ff6d01",
                     "url": "https://mail.lesgrandsvoisins.com",
@@ -49,7 +49,7 @@ const appsData = {
                 },
                 {
                     "id": "meet",
-                    "name": "Meet",
+                    "appName": "Meet",
                     "techno": "Jitsi",
                     "docurl": "",
                     "icon": "👨‍👩‍👧‍👦",
@@ -59,7 +59,7 @@ const appsData = {
                 },
                 {
                     "id": "mots-de-passe",
-                    "name": "Mots de Passe",
+                    "appName": "Mots de Passe",
                     "icon": "🔑",
                     "color": "#0f2879ff",
                     "url": "https://vw.lgv.info/",
@@ -71,7 +71,7 @@ const appsData = {
             "label": "Outils Libres SSO",
             "apps": [{
                     "id": "drive (roses copyparty)",
-                    "name": "Drive (Roses CopyParty)",
+                    "appName": "Drive (Roses CopyParty)",
                     "icon": "📂",
                     "color": "#1967d2",
                     "url": "https://cp.roses.gdvoisins.com/",
@@ -79,7 +79,7 @@ const appsData = {
                 },
                 {
                     "id": "liens (linkding)",
-                    "name": "Liens (Linkding)",
+                    "appName": "Liens (Linkding)",
                     "color": "#fbbc04",
                     "icon": "🔗",
                     "url": "https://linkding.lesgrandsvoisins.com/",
@@ -87,7 +87,7 @@ const appsData = {
                 },
                 {
                     "id": "markdown (hedgedoc)",
-                    "name": "Markdown (Hedgedoc)",
+                    "appName": "Markdown (Hedgedoc)",
                     "color": "#4285f4",
                     "icon": "📝",
                     "url": "https://mark.lesgrandsvoisins.com/",
@@ -95,7 +95,7 @@ const appsData = {
                 },
                 {
                     "id": "tâches (vikunja)",
-                    "name": "Tâches (Vikunja)",
+                    "appName": "Tâches (Vikunja)",
                     "icon": "☑️",
                     "color": "#fbbc04",
                     "url": "https://task.lesgrandsvoisins.com/",
@@ -107,7 +107,7 @@ const appsData = {
             "label": "Mon Compte",
             "apps": [{
                     "id": "compte-keycloak",
-                    "name": "Compte Keycloak",
+                    "appName": "Compte Keycloak",
                     "icon": "🪪",
                     "color": "#ff0000",
                     "url": "https://key.lesgrandsvoisins.com/realms/master/account",
@@ -115,7 +115,7 @@ const appsData = {
                 },
                 {
                     "id": "compte-guichet",
-                    "name": "Compte guichet",
+                    "appName": "Compte guichet",
                     "icon": "🪪",
                     "color": "#ff5722",
                     "url": "https://guichet.resdigita.com/user",
@@ -123,7 +123,7 @@ const appsData = {
                 },
                 {
                     "id": "inscription-infos",
-                    "name": "Inscription infos",
+                    "appName": "Inscription infos",
                     "icon": "🗞️",
                     "color": "#673ab7",
                     "url": "https://list.lesgrandsvoisins.com/subscription/form",
@@ -135,7 +135,7 @@ const appsData = {
             "label": "Dons",
             "apps": [{
                     "id": "dons-helloasso",
-                    "name": "Dons HelloAsso",
+                    "appName": "Dons HelloAsso",
                     "icon": "🪙",
                     "color": "#34a853",
                     "url": "https://www.helloasso.com/associations/les-grands-voisins/adhesions/souscription-annuelle",
@@ -143,7 +143,7 @@ const appsData = {
                 },
                 {
                     "id": "dons-paypal",
-                    "name": "Dons Paypal",
+                    "appName": "Dons Paypal",
                     "icon": "🪙",
                     "color": "#4285f4",
                     "url": "https://www.paypal.com/donate/?hosted_button_id=BPUUS6H6TP62Y",
@@ -151,7 +151,7 @@ const appsData = {
                 },
                 {
                     "id": "dons-stripe",
-                    "name": "Dons Stripe",
+                    "appName": "Dons Stripe",
                     "icon": "🪙",
                     "color": "#1a73e8",
                     "url": "https://donate.stripe.com/fZe7uD07z9hAg0w288",
@@ -163,7 +163,7 @@ const appsData = {
             "label": "Médias sociaux",
             "apps": [{
                     "id": "inatagram",
-                    "name": "Inatagram",
+                    "appName": "Inatagram",
                     "color": "#34a853",
                     "icon": "📽️",
                     "url": "https://www.instagram.com/les_grands_voisins",
@@ -171,7 +171,7 @@ const appsData = {
                 },
                 {
                     "id": "youtube",
-                    "name": "YouTube",
+                    "appName": "YouTube",
                     "color": "#ea4335",
                     "icon": "🎥",
                     "url": "https://www.youtube.com/@LesGrandsVoisinsCom",
@@ -179,7 +179,7 @@ const appsData = {
                 },
                 {
                     "id": "github",
-                    "name": "GitHub",
+                    "appName": "GitHub",
                     "icon": "👩🏻‍💻",
                     "color": "#5f6368",
                     "url": "https://github.com/lesgrandsvoisins",
@@ -191,7 +191,7 @@ const appsData = {
             "label": "Expérimentation",
             "apps": [{
                     "id": "writefreely",
-                    "name": "WriteFreely",
+                    "appName": "WriteFreely",
                     "icon": "✒️",
                     "color": "#1a73e8",
                     "url": "https://writefreely.lesgrandsvoisins.com/",
@@ -199,7 +199,7 @@ const appsData = {
                 },
                 {
                     "id": "forum",
-                    "name": "Forum",
+                    "appName": "Forum",
                     "icon": "💬",
                     "color": "#fbbc04",
                     "url": "https://discourse.lesgrandsvoisins.com/",
@@ -207,7 +207,7 @@ const appsData = {
                 },
                 {
                     "id": "fils-de-discussion",
-                    "name": "Fils de discussion",
+                    "appName": "Fils de discussion",
                     "icon": "🗨️",
                     "color": "#ea4335",
                     "url": "https://mm.lgv.info/",
@@ -215,7 +215,7 @@ const appsData = {
                 },
                 {
                     "id": "ancien-tabelau-de-bord",
-                    "name": "Ancien Tabelau de Bord",
+                    "appName": "Ancien Tabelau de Bord",
                     "color": "#4285f4",
                     "icon": "🚀",
                     "url": "https://www.lgv.info",
@@ -223,7 +223,7 @@ const appsData = {
                 },
                 {
                     "id": "xandikos",
-                    "name": "Xandikos",
+                    "appName": "Xandikos",
                     "icon": "🗓️",
                     "color": "#5f6368",
                     "url": "https://xandikos.lesgv.org",
@@ -235,7 +235,7 @@ const appsData = {
             "label": "Administration",
             "apps": [{
                     "id": "admin-wagtail",
-                    "name": "Admin Wagtail",
+                    "appName": "Admin Wagtail",
                     "icon": "⚙️",
                     "color": "#5f6368",
                     "url": "https://www.lesgrandsvoisins.com/cms-admin/",
@@ -243,7 +243,7 @@ const appsData = {
                 },
                 {
                     "id": "admin-keycloak",
-                    "name": "Admin Keycloak",
+                    "appName": "Admin Keycloak",
                     "icon": "⚙️",
                     "color": "#1a73e8",
                     "url": "https://key.lesgrandsvoisins.com/admin",
@@ -251,7 +251,7 @@ const appsData = {
                 },
                 {
                     "id": "admin-ghost",
-                    "name": "Admin Ghost",
+                    "appName": "Admin Ghost",
                     "icon": "⚙️",
                     "color": "#34a853",
                     "url": "https://blog.lesgrandsvoisins.com/ghost",
@@ -259,7 +259,7 @@ const appsData = {
                 },
                 {
                     "id": "admin-uptime-kuma",
-                    "name": "Admin Uptime Kuma",
+                    "appName": "Admin Uptime Kuma",
                     "color": "#fbbc04",
                     "icon": "⚙️",
                     "url": "https://list.lesgrandsvoisins.com/",
@@ -267,7 +267,7 @@ const appsData = {
                 },
                 {
                     "id": "admin-listmonk",
-                    "name": "Admin ListMonk",
+                    "appName": "Admin ListMonk",
                     "color": "#4285f4",
                     "icon": "⚙️",
                     "url": "https://list.lesgrandsvoisins.com/",
@@ -275,7 +275,7 @@ const appsData = {
                 },
                 {
                     "id": "admin-config-magic",
-                    "name": "Admin Config Magic",
+                    "appName": "Admin Config Magic",
                     "icon": "⚙️",
                     "color": "#fbbc04",
                     "url": "https://www.configmagic.com/",

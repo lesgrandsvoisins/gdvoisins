@@ -161,7 +161,6 @@
     transition: transform 0.6s;
     transform-style: preserve-3d;
     color: var(--main-fg-color);
-    */
 }
 
 .app-item:hover .app-card {
@@ -211,24 +210,30 @@
     position: absolute;
     top: -1rem;
     right: 0;
-    background-color: transparent;
 }
 
 
 .app-back>.app-documentation>input {
-    border-radius: 1rem 1rem 0 0;
+    /* border-radius: 1rem 1rem 0 0; */
+    border-radius: 1rem;
+    height: 2rem;
+    width: 2rem;
     border-bottom: none;
-    border-width: 1px;
+    border-width: 2px;
     font-weight: bold;
+    background-color: var(--reverse-bg-color);
+    border-color: var(--main-bg-color);
 }
 
 .app-front>.app-documentation>input {
     border-radius: 100%;
-    border-width: 1px;
+    border-width: 2px;
     font-weight: bold;
     font-size: large;
     height: 3rem;
     width: 3rem;
+    background-color: var(--reverse-bg-color);
+    border-color: var(--main-bg-color);
 }
 
 .app-icon {

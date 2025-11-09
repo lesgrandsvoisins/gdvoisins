@@ -52,9 +52,6 @@ function loadApps() {
                 //     ${group.label}
                 // </label>
                 // `;
-                flexBreak = document.createElement('div');
-                flexBreak.className = 'app-flex-break';
-                appGrid.appendChild(flexBreak);
             } else if (i == n) {
                 extraClass = "app-item-last";
             } else {
@@ -79,7 +76,7 @@ function loadApps() {
             docHTML = "";
             if (app.docurl && app.docurl != "") {
                 docHTML = `
-                <form action="${app.docurl}" class="app-documentation"><input type="submit" value="doc."/></form>
+                <form action="${app.docurl}" class="app-documentation"><input type="submit" value="ℹ️"/></form>
                 `;
             }
             appItem.innerHTML = `
@@ -110,6 +107,11 @@ function loadApps() {
 
 
             appGrid.appendChild(appItem);
+            if (i == n) {
+                flexBreak = document.createElement('div');
+                flexBreak.className = 'app-flex-break';
+                appGrid.appendChild(flexBreak);
+            }
         });
 
         // appGrid.appendChild(groupDiv);

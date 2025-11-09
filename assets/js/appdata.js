@@ -4,24 +4,24 @@ const appsData = {
             "label": "Sites principaux",
             "apps": [{
                     "id": "www",
-                    "appName": "WWW",
+                    "appName": "Les Grands Voisins(.com)",
                     "icon": "🏠",
-                    "color": "#fbbc04",
+                    "color": "#345999",
                     "url": "https://www.lesgrandsvoisins.com",
                     "description": "Portail lesgrandsvoisins.com"
                 },
                 {
                     "id": "blog",
-                    "appName": "Blog",
+                    "appName": "Blog LesGrandsVoisins.com",
                     "icon": "📰",
-                    "color": "#34a853",
+                    "color": "#ffffffff",
                     "url": "https://blog.lesgrandsvoisins.com",
                     "description": "Blog des Grands Voisins"
                 },
                 {
                     "id": "gdvoisins",
-                    "appName": "GDVoisins",
-                    "color": "#4285f4",
+                    "appName": "G D Voisins",
+                    "color": "#1a1a70ff",
                     "icon": "🧭",
                     "url": "https://www.gdvoisins.com",
                     "description": "Tableau de bord des outils libres"
@@ -30,7 +30,7 @@ const appsData = {
                     "id": "documentation",
                     "appName": "Documentation",
                     "icon": "📖",
-                    "color": "#04bcfb",
+                    "color": "#1b1464",
                     "url": "https://quartz.resdigita.com",
                     "description": "Documentation sur les outils"
                 }
@@ -40,28 +40,28 @@ const appsData = {
             "label": "Outils Libres",
             "apps": [{
                     "id": "webmail",
-                    "appName": "Webmail",
+                    "appName": "Web Mail",
                     "icon": "✉️",
-                    "color": "#ff6d01",
+                    "color": "#37befe",
                     "url": "https://mail.lesgrandsvoisins.com",
                     "docurl": "https://quartz.resdigita.com/config/services/email/",
                     "description": "Webmail et serveur mail des Grands Voisins"
                 },
                 {
                     "id": "meet",
-                    "appName": "Meet",
+                    "appName": "Meet (Jitsi)",
                     "techno": "Jitsi",
                     "docurl": "",
                     "icon": "👨‍👩‍👧‍👦",
-                    "color": "#0f9d58",
+                    "color": "#0074e0",
                     "url": "https://jitsi.lgv.info/lesgrandsvoisins",
                     "description": "Salle de réunion Jitsi en visioconférence"
                 },
                 {
                     "id": "mots-de-passe",
-                    "appName": "Mots de Passe",
+                    "appName": "Mots-de-passe (Vaultwarden)",
                     "icon": "🔑",
-                    "color": "#0f2879ff",
+                    "color": "#175ddc",
                     "url": "https://vw.lgv.info/",
                     "description": "Vaultwarden pour gérer nos mots de passe"
                 }
@@ -73,14 +73,14 @@ const appsData = {
                     "id": "drive (roses copyparty)",
                     "appName": "Drive (Roses CopyParty)",
                     "icon": "📂",
-                    "color": "#1967d2",
+                    "color": "#ffcc55",
                     "url": "https://cp.roses.gdvoisins.com/",
                     "description": "Partager des fichiers et des dossiers"
                 },
                 {
                     "id": "liens (linkding)",
                     "appName": "Liens (Linkding)",
-                    "color": "#fbbc04",
+                    "color": "#5755d8",
                     "icon": "🔗",
                     "url": "https://linkding.lesgrandsvoisins.com/",
                     "description": "Gérer nos liens web (favoris / marque pages)"
@@ -88,7 +88,7 @@ const appsData = {
                 {
                     "id": "markdown (hedgedoc)",
                     "appName": "Markdown (Hedgedoc)",
-                    "color": "#4285f4",
+                    "color": "#b51f09",
                     "icon": "📝",
                     "url": "https://mark.lesgrandsvoisins.com/",
                     "description": "Editer nos documents collaboratifs en format Markdown"
@@ -97,7 +97,7 @@ const appsData = {
                     "id": "tâches (vikunja)",
                     "appName": "Tâches (Vikunja)",
                     "icon": "☑️",
-                    "color": "#fbbc04",
+                    "color": "#196aff",
                     "url": "https://task.lesgrandsvoisins.com/",
                     "description": "Coordonner des projets et des tâches"
                 }
@@ -109,7 +109,7 @@ const appsData = {
                     "id": "compte-keycloak",
                     "appName": "Compte Keycloak",
                     "icon": "🪪",
-                    "color": "#ff0000",
+                    "color": "#36c6e9",
                     "url": "https://key.lesgrandsvoisins.com/realms/master/account",
                     "description": "Interface de mon administration pour moi"
                 },
@@ -117,15 +117,15 @@ const appsData = {
                     "id": "compte-guichet",
                     "appName": "Compte guichet",
                     "icon": "🪪",
-                    "color": "#ff5722",
+                    "color": "#1b1464",
                     "url": "https://guichet.resdigita.com/user",
                     "description": "Ancien gestion d'utilisateur Guichet"
                 },
                 {
                     "id": "inscription-infos",
-                    "appName": "Inscription infos",
+                    "appName": "Infolettre (Listmonk)",
                     "icon": "🗞️",
-                    "color": "#673ab7",
+                    "color": "#0055d4",
                     "url": "https://list.lesgrandsvoisins.com/subscription/form",
                     "description": "Inscription sur nos lettres d'information ListMonk"
                 }
@@ -137,7 +137,7 @@ const appsData = {
                     "id": "dons-helloasso",
                     "appName": "Dons HelloAsso",
                     "icon": "🪙",
-                    "color": "#34a853",
+                    "color": "#4c3fcf",
                     "url": "https://www.helloasso.com/associations/les-grands-voisins/adhesions/souscription-annuelle",
                     "description": "Dons HelloAsso pour Les Grands Voisins"
                 },
@@ -145,7 +145,7 @@ const appsData = {
                     "id": "dons-paypal",
                     "appName": "Dons Paypal",
                     "icon": "🪙",
-                    "color": "#4285f4",
+                    "color": "#ffd140",
                     "url": "https://www.paypal.com/donate/?hosted_button_id=BPUUS6H6TP62Y",
                     "description": "Dons Paypal pour Les Grands Voisins"
                 },
@@ -153,7 +153,7 @@ const appsData = {
                     "id": "dons-stripe",
                     "appName": "Dons Stripe",
                     "icon": "🪙",
-                    "color": "#1a73e8",
+                    "color": "#58e5a2",
                     "url": "https://donate.stripe.com/fZe7uD07z9hAg0w288",
                     "description": "Dons Stripe pour Les Grands Voisins"
                 }
@@ -162,9 +162,9 @@ const appsData = {
         {
             "label": "Médias sociaux",
             "apps": [{
-                    "id": "inatagram",
-                    "appName": "Inatagram",
-                    "color": "#34a853",
+                    "id": "instagram",
+                    "appName": "Instagram",
+                    "color": "#ff8eb5",
                     "icon": "📽️",
                     "url": "https://www.instagram.com/les_grands_voisins",
                     "description": "les_grands_voisins sur Instagram"
@@ -172,7 +172,7 @@ const appsData = {
                 {
                     "id": "youtube",
                     "appName": "YouTube",
-                    "color": "#ea4335",
+                    "color": "#ff0033",
                     "icon": "🎥",
                     "url": "https://www.youtube.com/@LesGrandsVoisinsCom",
                     "description": "@LesGrandsVoisinsCom sur Youtube"
@@ -181,7 +181,7 @@ const appsData = {
                     "id": "github",
                     "appName": "GitHub",
                     "icon": "👩🏻‍💻",
-                    "color": "#5f6368",
+                    "color": "#000000",
                     "url": "https://github.com/lesgrandsvoisins",
                     "description": "lesgrandsvoisins sur GitHub"
                 }
@@ -191,41 +191,41 @@ const appsData = {
             "label": "Expérimentation",
             "apps": [{
                     "id": "writefreely",
-                    "appName": "WriteFreely",
+                    "appName": "Bêta WriteFreely",
                     "icon": "✒️",
-                    "color": "#1a73e8",
+                    "color": "#888888",
                     "url": "https://writefreely.lesgrandsvoisins.com/",
                     "description": "Blog Write Freely"
                 },
                 {
                     "id": "forum",
-                    "appName": "Forum",
+                    "appName": "Bêta Forum",
                     "icon": "💬",
-                    "color": "#fbbc04",
+                    "color": "#888888",
                     "url": "https://discourse.lesgrandsvoisins.com/",
                     "description": "Forum Discourse"
                 },
                 {
                     "id": "fils-de-discussion",
-                    "appName": "Fils de discussion",
+                    "appName": "Bêta Fils de discussion",
                     "icon": "🗨️",
-                    "color": "#ea4335",
+                    "color": "#888888",
                     "url": "https://mm.lgv.info/",
                     "description": "Fils de discussion Matter Most"
                 },
                 {
                     "id": "ancien-tabelau-de-bord",
-                    "appName": "Ancien Tabelau de Bord",
-                    "color": "#4285f4",
+                    "appName": "Bêta Ancien Tabelau-de-Bord",
+                    "color": "#888888",
                     "icon": "🚀",
                     "url": "https://www.lgv.info",
                     "description": "Ancien tableau de bord Wagtail"
                 },
                 {
                     "id": "xandikos",
-                    "appName": "Xandikos",
+                    "appName": "Bêta Xandikos",
                     "icon": "🗓️",
-                    "color": "#5f6368",
+                    "color": "#888888",
                     "url": "https://xandikos.lesgv.org",
                     "description": "Calendriers Xandikos"
                 }
@@ -237,7 +237,7 @@ const appsData = {
                     "id": "admin-wagtail",
                     "appName": "Admin Wagtail",
                     "icon": "⚙️",
-                    "color": "#5f6368",
+                    "color": "#008888",
                     "url": "https://www.lesgrandsvoisins.com/cms-admin/",
                     "description": "Administration du portail Wagtail"
                 },
@@ -245,7 +245,7 @@ const appsData = {
                     "id": "admin-keycloak",
                     "appName": "Admin Keycloak",
                     "icon": "⚙️",
-                    "color": "#1a73e8",
+                    "color": "#008888",
                     "url": "https://key.lesgrandsvoisins.com/admin",
                     "description": "Administration du serveur Keycloak"
                 },
@@ -253,14 +253,14 @@ const appsData = {
                     "id": "admin-ghost",
                     "appName": "Admin Ghost",
                     "icon": "⚙️",
-                    "color": "#34a853",
+                    "color": "#008888",
                     "url": "https://blog.lesgrandsvoisins.com/ghost",
                     "description": "Administration du blog Ghost"
                 },
                 {
                     "id": "admin-uptime-kuma",
                     "appName": "Admin Uptime Kuma",
-                    "color": "#fbbc04",
+                    "color": "#008888",
                     "icon": "⚙️",
                     "url": "https://list.lesgrandsvoisins.com/",
                     "description": "Monitoring par notre Uptime Kuma"
@@ -268,7 +268,7 @@ const appsData = {
                 {
                     "id": "admin-listmonk",
                     "appName": "Admin ListMonk",
-                    "color": "#4285f4",
+                    "color": "#008888",
                     "icon": "⚙️",
                     "url": "https://list.lesgrandsvoisins.com/",
                     "description": "Listes de diffusion par notre serveur ListMonk"
@@ -277,7 +277,7 @@ const appsData = {
                     "id": "admin-config-magic",
                     "appName": "Admin Config Magic",
                     "icon": "⚙️",
-                    "color": "#fbbc04",
+                    "color": "#008888",
                     "url": "https://www.configmagic.com/",
                     "description": "Wikijs de configuration Config Magic"
                 }

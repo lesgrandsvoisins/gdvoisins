@@ -91,7 +91,7 @@ function loadApps() {
                                     <div class="app-name">${app.appName}</div>
                                     <div class="app-description">${app.description}</div>
                                 ${docHTML}
-                                    <div class="group-label">${group.label}</div>
+                                    <!-- <div class="group-label">${group.label}</div> -->
                             </div>
                         </div>
                 
